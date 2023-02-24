@@ -131,6 +131,8 @@ async function createTeam(){
         }else if(choice === 'Finish building the team'){
             // runs render to generate the html
             const html = render(team);
+            // writes html to new file in output folder
+            fs.writeFile(outputPath, html);
         };
     };
 };
